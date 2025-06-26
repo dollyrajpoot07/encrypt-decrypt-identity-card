@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Identity Card Viewer with Encrypt/Decrypt & Flip
 
-## Getting Started
+This React utility mimics a digital Identity card layout for 20 Indian users. It allows:
+- Masking sensitive data (email, phone, DOB, Identity number, address)
+- Toggling encryption on single click
+- Flipping card to show front/back on double click
+- Navigation between users (Next/Prev)
+- Selecting users via buttons
+- Manual "Flip" button
+- Identity number styled as per real card
 
-First, run the development server:
+---
+
+## 🔐 Masking Rules
+
+| Field         | Masking Logic                                                   |
+|---------------|------------------------------------------------------------------|
+| **Email**     | Keep 1st & last letter before `@`, replace middle with 6 X      |
+| **DOB**       | `**/**/****`                                                    |
+| **Phone**     | Show `+91` and last 4 digits, mask rest                         |
+| **Identity**   | `XXXX XX XXXX 1234`                                             |
+| **Address**   | Hide all before city/state/country/zip                          |
+
+---
+
+## 🧩 Features
+
+- Flip card (manual & double-click)
+- Encrypt/decrypt data on single click
+- User list buttons to jump directly
+- Forward/backward arrows for navigation
+- Disabled arrows on first/last user
+- Fully responsive layout
+
+---
+
+## 🖼 Layout
+
+- Front:
+  - Image (left), Name, DOB, Gender, Email (right)
+  - Identity number at bottom
+- Back:
+  - Address, Phone, Identity number at bottom
+
+---
+
+## 🧪 Tech Stack
+
+- React (Client Components)
+- CSS Modules
+- `useState`, `useRef`
+
+---
+
+## 🚀 Setup
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

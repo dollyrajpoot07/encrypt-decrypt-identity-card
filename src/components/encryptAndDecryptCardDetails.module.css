@@ -1,0 +1,172 @@
+.wrapper {
+  max-width: 700px;
+  margin: 2rem auto;
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.wrapper h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.card {
+  background: white;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: 0.3s ease;
+  height: 230px;
+}
+
+.card:hover {
+  width: 505px;
+  height: 233px;
+  box-shadow: 2px 6px 14px rgba(233, 61, 3, 0.17);
+}
+
+.card h2 {
+  color: #333;
+  margin: 0px 0 10px;
+}
+
+.frontContent,
+.backContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.image {
+  width: 100px;
+  height: 120px;
+  object-fit: cover;
+  border: 2px solid #000;
+  margin-right: 1rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.3rem;
+  font-size: 1rem;
+  color: #222;
+}
+
+.details h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+
+.rowContent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.details p {
+  margin: 0.2rem 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.topText {
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 0.6rem;
+}
+
+.identity {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: auto;
+  letter-spacing: 4px;
+  color: black;
+  border-top: 2px solid #d32f2f;
+  padding-top: 0.6rem;
+  text-align: center;
+}
+
+.backContent p {
+  margin: 0.5rem 0;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.navigation {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.navigation button {
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.navigation button:hover {
+  background: #0084ff;
+}
+
+.navigation button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+
+.selector {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.userBtn {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  background: #e0e0e0;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.userBtn:hover {
+  background: #cfd8dc;
+}
+
+.active {
+  background: #4caf50 !important;
+  color: white;
+  font-weight: bold;
+}
